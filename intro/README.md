@@ -47,7 +47,7 @@ The light client is the default implementation of XIBC relayer, which is trustle
 
 #### Cross-chain interoperability between two chains via relay-chain
 
-The Teleport chain just as a relay chain without any packet processing logic.
+The Teleport Chain just as a relay chain without any packet processing logic.
 
 ![avatar](./cross-chain-with-relay.svg)
 
@@ -82,9 +82,9 @@ Let us explain step by step the IBC protocol application design pattern of XIBC 
 
 ![avatar](./rcc-with-transfer.svg)
 
-Step 1: User initiates a transaction to dApp
+Step 1: User invokes the cross-chain method of dApp proxy
 
-Instead of interfacing directly with the existing dApp smart contracts, a user now interacts (mark A) with a new dApp proxy contract to express their intention of cross-chain logic execution. This dApp proxy becomes part of the overall dApp business logic and may interact with existing smart contracts on the source chain. This is usually the only transaction that a user sends to interact with this inter-chain dApp.
+The cross-chain dApp proxy is deployed on source chain by the developers for their dApp on destination chain. The user now interacts with the proxy to initiate the cross-chain transaction. 
 
 Step 2: dApp proxy invokes XIBC multi-call contract
 
@@ -120,12 +120,12 @@ User can use teleport found pool via 2-hop.
 
 Step 1: User initiates a transaction to dApp
 
-User initiates a transaction to the cross-chain transfer via Teleport contract, 
-which contains token-transfer and remote-contract-call sub-operations on Teleport chain.
+User initiates a transaction to the cross-chain transfer via Teleport basic application contract, 
+which contains token-transfer and remote-contract-call sub-operations on Teleport Chain.
 
 Step 2: dApp proxy invokes XIBC multi-call contract
 
 Step 3: XIBC multi-call contract invoke XIBC token-transfer contract and XIBC remote-contract-call contract to generate sub-packets
 
-The token-transfer receiver address on Teleport chain is remote-contract-call contract, so the remote-contract-call contract can use the funds to incoke cross-chain-transfer-via-teleport contract on Teleport chain.
+The token-transfer receiver address on Teleport chain is remote-contract-call contract, so the remote-contract-call contract can use the funds to invoke cross-chain-transfer-via teleport contract on Teleport chain.
 
