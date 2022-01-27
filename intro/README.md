@@ -110,11 +110,11 @@ Step 8: Execute acknowledge on source chain
 Source chain XIBC packet contract receives the ack and verify the proof, and then route each sub-acknowledge to XIBC application contracts. 
 XIBC token-transfer contract will [refund user funds if get an error acknowledge](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/transfer/Transfer.sol#L434), RCC will store the [ack](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/rcc/RCC.sol#L156) and Users can execute their own exception handling logic through this data.
 
-#### Cross-chain transfer via Teleport using Teleport found pool
+#### Cross-chain transfer via Teleport using Teleport funding pool
 
-In the above example, token-transfer contract not only generates the cross-chain token transfer sub-packet, but also provides a cross-chain fund pool.
+In the above example, token-transfer contract not only generates the cross-chain token transfer sub-packet, but also provides a cross-chain funding pool for cross-chain liquidity.
 
-User can use teleport found pool via 2-hop.
+The teleport funding pool can be harnessed via a "two hops" transaction.
 
 ![avatar](./2hop-transfer.svg)
 
