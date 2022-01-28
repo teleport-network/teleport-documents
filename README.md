@@ -29,12 +29,12 @@ aside: false
 
 ## Get Started
 
-- **[Introduction](./intro/overview.md)**: High-level overview of Teleport.
+- **[Introduction](./intro/)**: High-level overview of Teleport.
 
 ## Reference
 
 - **[Teleport Chain](https://github.com/teleport-network/documents)**: Teleport Chain Documentation.
-- **[XIBC protocol](./xibc/)**: XIBC protocol Documentation.
+- **[XIBC protocol](https://github.com/teleport-network/documents/tree/main/modules/XIBC)**: XIBC protocol Documentation.
 - **[Relayers](./relayers/)**: Important concepts for relay cross-chain packet.
 
 ## Other Resources
