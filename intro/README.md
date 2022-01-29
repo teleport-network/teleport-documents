@@ -1,4 +1,4 @@
-# Teleport network
+# Teleport Network
 
 Teleport Network provides infrastructure and framework for cross-chain communication. It consists of a decentralized blockchain - Teleport Chain, a cross-chain protocol - XIBC, and developer SDKs for cross-chain dApps integration.
 
@@ -10,7 +10,7 @@ Some cross-chain application examples:
 
 ### XIBC protocol
 
-[XIBC protocol](../modules/XIBC/README.md) is a standard protocol base on [IBC](https://ibcprotocol.org/) for Teleport bridge implementation.
+[XIBC protocol](../modules/XIBC/README.md) is a standard protocol based on [IBC](https://ibcprotocol.org/) for Teleport bridge implementation.
 
 The protocol includes four modules, which are **client**, **packet**, **routing** and **basic applications**.
 
