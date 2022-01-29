@@ -17,7 +17,7 @@ The protocol includes four modules, which are **client**, **packet**, **routing*
 **Client** stores the trust root and verifies packet(or acknowledge) commitment proof.
 **Packet** is the entry point for sending and receiving packets, and stores the packet(and acknowledge).
 **Routing** routes each sub-packet(or sub-acknowledges) to each basic application to execute their own logic.
-**Basic applications** are the cornerstone of application development on the XIBC protocol. They are token-transfer and remote-contract-call and multi-contract-call, you can directly use them for cross-chain transactions or develop your cross-chain dApps base on them.
+**Basic applications** are the cornerstone of application development on the XIBC protocol. They are token-transfer and remote-contract-call and multi-contract-call, you can directly use them for cross-chain transactions or develop your cross-chain dApps based on them.
 
 #### XIBC client
 There are currently two 
@@ -39,8 +39,8 @@ The light client is the default implementation of XIBC relayer, which is trustle
 
 1. User sends a cross-chain transaction from the source chain via XIBC application contracts.
 2. Source chain XIBC contracts generate cross-chain packets.
-3. Relayer syncs the trust root, cross-chain packet and commitment proof from the source chain to destination chain. In most scenarios, the trust root is the merkle root of the state tree, and the proof of commitment is the merkle proof of the commitment in state tree.
-4. Destination chain XIBC contracts receive the cross-chain packet and verify the proof, and then execute the cross-chain package and generate acknowledge.
+3. Relayer syncs the trust root, cross-chain packet and commitment proof from the source chain to destination chain. In most scenarios, the trust root is the merkle root of the state tree, and the proof of commitment is the merkle proof of the commitment in the state tree.
+4. Destination chain XIBC contracts receive the cross-chain packet and verify the proof, and then execute the cross-chain package and generate acknowledgement.
 5. Relayer syncs the trust root, acknowledge and acknowledge commitment proof from the destination chain to source chain.
 6. Source chain XIBC contracts receives the ack and verify the proof, and then execute the ack. for instance, refund user funds if the cross-chain transfer fails.
 
@@ -101,13 +101,13 @@ Relayers packet relay trust root, packet and packet proof to the destination cha
 
 Step 6: Excute packet on destination chain
 
-Destination chain XIBC packet contract receives the cross-chain packets and verifies the proof, and then routes sub-packets to XIBC token-transfer contract and remote-contract-call contract. Basic application contracts execute their own logic and return to packet contract sub-acknowledges, packet contract aggregate all sub-acknowledges and store an acknowledge corresponding to the packet.
+Destination chain XIBC packet contract receives the cross-chain packets and verifies the proof, and then routes sub-packets to XIBC token-transfer contract and remote-contract-call contract. Basic application contracts execute their own logic and return to packet contract sub-acknowledges, packet contract aggregate all sub-acknowledges and store an acknowledgement corresponding to the packet.
 
 Step 7: Relayers relay acknowledge back to source chain
 
 Step 8: Execute acknowledge on source chain
 
-Source chain XIBC packet contract receives the ack and verify the proof, and then route each sub-acknowledge to XIBC application contracts. 
+Source chain XIBC packet contract receives the ack and verifies the proof, and then route each sub-acknowledge to XIBC application contracts. 
 XIBC token-transfer contract will [refund user funds if getting an error acknowledgement](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/transfer/Transfer.sol#L434), RCC will store the [ack](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/rcc/RCC.sol#L156) and Users can execute their own exception handling logic through this data.
 
 #### Cross-chain transfer via Teleport using Teleport funding pool
