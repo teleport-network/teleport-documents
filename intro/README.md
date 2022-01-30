@@ -98,7 +98,6 @@ Step 5: Relayers packet to the destination chain
 
 Relayers packet relay trust root, packet and packet proof to the destination chain.
 
-
 Step 6: Excute packet on destination chain
 
 Destination chain XIBC packet contract receives the cross-chain packets and verifies the proof, and then routes sub-packets to XIBC token-transfer contract and remote-contract-call contract. Basic application contracts execute their own logic and return to packet contract sub-acknowledges, packet contract aggregate all sub-acknowledges and store an acknowledgement corresponding to the packet.
@@ -127,5 +126,23 @@ Step 2: dApp proxy invokes XIBC multi-call contract
 
 Step 3: XIBC multi-call contract invoke XIBC token-transfer contract and XIBC remote-contract-call contract to generate sub-packets
 
-The token-transfer receiver address on Teleport chain is remote-contract-call contract, so the remote-contract-call contract can use the funds to invoke cross-chain-transfer-via teleport contract on Teleport chain.
+Step 4: XIBC packet initiates cross-chain packet
+
+Step 5: Relayers packet to the Teleport chain
+
+Step 6: Excute packet on Teleport chain
+
+Step 7: cross-chain transfer agent contract invokes XIBC token-transfer contract and initiates next cross-chain packet
+
+The token-transfer receiver address on Teleport chain is remote-contract-call contract, so the remote-contract-call contract can use the funds to invoke cross-chain transfer agent contract on Teleport chain.
+
+Step 8: Relayers packet to the destination chain
+
+Step 9: Excute packet on destination chain
+
+Step 10: Relayers relay acknowledge back to Teleport chain
+
+Step 11: Relayers relay acknowledge back to source chain
+
+Step 12: Execute acknowledge on source chain
 
