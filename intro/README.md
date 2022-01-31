@@ -48,7 +48,7 @@ On the other hand, the TSS client is used where the light client is not feasible
 
 #### Cross-chain interoperability between two chains via relay-chain
 
-The Teleport Chain plays as a relay chain without any packet processing logic.
+The Teleport Chain plays as a relay chain without any packet processing for business logic.
 
 ![avatar](./cross-chain-with-relay.svg)
 
