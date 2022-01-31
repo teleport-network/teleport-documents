@@ -21,7 +21,7 @@ The protocol includes four modules, which are **client**, **packet**, **routing*
 
 #### XIBC client
 There are currently two types of client
-implementations for alternative relay approach: 
+implementations for alternative relay approaches: 
 
 Light client (for XIBC light client relayer)
 
@@ -114,7 +114,7 @@ XIBC token-transfer contract will [refund user funds if getting an error acknowl
 
 In the above example, a token-transfer contract not only generates the cross-chain token transfer sub-packet, but also provides a cross-chain funding pool for cross-chain liquidity.
 
-The teleport funding pool can be harnessed via a "two hops" transaction.
+The teleport funding pool can be utilized via a cross-chain multi-call transaction.
 
 ![avatar](./2hop-transfer.svg)
 
@@ -135,11 +135,13 @@ Step 6: The packet is executed on Teleport Chain
 
 Step 7: The cross-chain transaction agent contract invokes XIBC token-transfer contract and initiates next cross-chain packet
 
-The token-transfer receiver address on Teleport Chain is remote-contract-call contract, so the remote-contract-call contract can use the funds to invoke cross-chain transfer agent contract on Teleport Chain.
+The token-transfer receiver on Teleport Chain is the remote-contract-call contract. So the remote-contract-call contract can carry the transferred token while invoking the cross-chain transfer agent contract on Teleport Chain.
 
 Step 8: Relayers packet to the destination chain
 
 Step 9: The packet is executed on the destination chain
+
+The transferred token can be utilized for the dApp contract call, like token swap or staking.
 
 Step 10: Relayers relay the acknowledgement back to Teleport Chain
 
