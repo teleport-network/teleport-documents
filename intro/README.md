@@ -20,14 +20,15 @@ The protocol includes four modules, which are **client**, **packet**, **routing*
 **Basic applications** are the cornerstone of application development on the XIBC protocol. They are token-transfer and remote-contract-call and multi-contract-call, you can directly use them for cross-chain transactions or develop your cross-chain dApps based on them.
 
 #### XIBC client
-There are currently two 
-implementations to relay data: 
+There are currently two types of client
+implementations for alternative relay approach: 
 
-Light client
+Light client (for XIBC light client relayer)
 
-[TSS](https://github.com/teleport-network/documents/blob/main/modules/XIBC/tss.md)
+[TSS Client](https://github.com/teleport-network/documents/blob/main/modules/XIBC/tss.md) (for XIBC TSS relayer)
 
-The light client is the default implementation of XIBC relayer, which is trustless and permissionless. On the other hand, the TSS client is used where the light client is not feasible, for chains like Bitcoin which is not programmable, for layer2 like Arbitrum which doesn't have block to provide trust root, and for the dest chain Ethereum which is too expensive to verify trust root and state proof.
+The light client is for XIBC default relayer, which is trustless and permissionless. The cross-chain packet is verified on the destination chain. 
+On the other hand, the TSS client is used where the light client is not feasible, for chains like Bitcoin which is not programmable, for layer2 like Arbitrum which doesn't have block to provide trust root, and for the dest chain Ethereum which is too expensive to verify trust root and state proof. The packet is verified by the TSS nodes instead of the destination chain.
 
 ## Architecture
 
@@ -42,7 +43,7 @@ The light client is the default implementation of XIBC relayer, which is trustle
 3. Relayer syncs the trust root, cross-chain packet and commitment proof from the source chain to destination chain. In most scenarios, the trust root is the merkle root of the state tree, and the proof of commitment is the merkle proof of the commitment in the state tree.
 4. Destination chain XIBC contracts receive the cross-chain packet and verify the proof, and then execute the cross-chain packet and generate an acknowledgement.
 5. Relayer syncs the trust root, the acknowledgement and the ack commitment proof from the destination chain to source chain.
-6. Source chain XIBC contracts receives the ack and verify the proof, and then execute the acknowledgement. for instance, refund user funds if the cross-chain transfer fails.
+6. Source chain XIBC contracts receive the ack and verify the proof, and then execute the acknowledgement. for instance, refund user funds if the cross-chain transfer fails.
 
 
 #### Cross-chain interoperability between two chains via relay-chain
@@ -56,7 +57,7 @@ The Teleport Chain plays as a relay chain without any packet processing logic.
 3. Relayer syncs the trust root, cross-chain packet and commitment proof from the source chain to relay chain.
 4. Relay chain XIBC contracts receive the cross-chain data packet and verifies the proof, and then stores the data packet without any processing.
 5. Relayer syncs the trust root, cross-chain packet and commitment proof from the relay chain to the destination chain.
-6. Destination chain XIBC packet contracts receive the cross-chain packet and verify the proof, and then execute the cross-chain packet and generate an acknowledgement.
+6. On the destination chain, XIBC contracts receive the cross-chain packet and verify the proof, and then execute the cross-chain packet and generate an acknowledgement.
 7. Relayer syncs the trust root, the acknowledgement, and the ack commitment proof from the destination chain to relay chain.
 8. Relay chain XIBC contracts receive the cross-chain acknowledgement packet and verifies the proof, and then stores the acknowledgement without any processing.
 9. Relayer syncs the trust root, the acknowledgement and the ack commitment proof from the relay chain to source chain.
@@ -100,13 +101,13 @@ Relayers relay the trust root, the packet and the packet proof to the destinatio
 
 Step 6: The packet is executed on the destination chain
 
-Destination chain XIBC packet contract receives the cross-chain packets and verifies the proof, and then routes sub-packets to XIBC token-transfer contract and remote-contract-call contract. Basic application contracts execute their own logic and return sub-acknowledges to XIBC packet contract. Then the packet contract aggregates all sub-acknowledges and store an acknowledgement corresponding to the packet.
+On the Destination chain, XIBC contracts receive the cross-chain packets and verifies the proof, and then routes sub-packets to XIBC token-transfer contract and remote-contract-call contract. Basic application contracts execute their own logic and return sub-acknowledgements to the XIBC packet contract. Then the packet contract aggregates all sub-acknowledges and stores an acknowledgement corresponding to the packet.
 
 Step 7: Relayers relay the acknowledgement back to the source chain
 
 Step 8: The acknowledgement is executed on the source chain
 
-Source chain XIBC packet contract receives the acknowledgement and verifies the proof, and then route each sub-acknowledge to XIBC application contracts. 
+Source chain XIBC packet contract receives the acknowledgement and verifies the proof, and then routes each sub-acknowledge to XIBC application contracts. 
 XIBC token-transfer contract will [refund user funds if getting an error acknowledgement](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/transfer/Transfer.sol#L434), RCC will store the [ack](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/rcc/RCC.sol#L156) and users can execute their own exception handling logic by the ack.
 
 #### Cross-chain transfer via Teleport using Teleport funding pool
