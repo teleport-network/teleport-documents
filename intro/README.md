@@ -77,7 +77,7 @@ Multi-call contract allows users or other contracts to call and initiate cross-c
 
 Developers can use the combination of the above three basic contracts to develop any cross-chain interoperability contracts.
 
-Let us explain step by step the IBC protocol application design pattern of XIBC and how to develop an application through two examples
+Let us explain step by step the XIBC protocol application design pattern and how to develop an application through two examples.
 
 #### Remote contract call with token transfer
 
@@ -103,9 +103,7 @@ Step 6: The packet is executed on the destination chain
 
 On the Destination chain, XIBC contracts receive the cross-chain packets and verifies the proof, and then routes sub-packets to XIBC token-transfer contract and remote-contract-call contract. Basic application contracts execute their own logic and return sub-acknowledgements to the XIBC packet contract. Then the packet contract aggregates all sub-acknowledges and stores an acknowledgement corresponding to the packet.
 
-Step 7: Relayers relay the acknowledgement back to the source chain
-
-Step 8: The acknowledgement is executed on the source chain
+Step 7: Relayers relay the acknowledgement back to the source chain and the acknowledgement will be executed by XIBC token-transfer contract and XIBC remote-contract-call contract.
 
 Source chain XIBC packet contract receives the acknowledgement and verifies the proof, and then routes each sub-acknowledge to XIBC application contracts. 
 XIBC token-transfer contract will [refund user funds if getting an error acknowledgement](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/transfer/Transfer.sol#L434), RCC will store the [ack](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/rcc/RCC.sol#L156) and users can execute their own exception handling logic by the ack.
@@ -145,7 +143,5 @@ The transferred token can be utilized for the dApp contract call, like token swa
 
 Step 10: Relayers relay the acknowledgement back to Teleport Chain
 
-Step 11: Relayers relay the acknowledgement back to the source chain
-
-Step 12: Execute the acknowledgement on the source chain
+Step 11: Relayers relay the acknowledgement back to the source chain and the acknowledgement will be executed by XIBC token-transfer contract and XIBC remote-contract-call contract.
 
