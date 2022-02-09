@@ -14,7 +14,8 @@ A few examples of cross-chain practices:
 
 **Client** - stores the trust root and verifies packet(or acknowledgement) commitment proof. Currently there are two types of client implementations for alternative relay approaches:
 * **Light client for XIBC light client relayer**: trustless and permissionless, making sure cross-chain packet is verified on the destination chain; 
-* **TSS client for XIBC TSS relayer**: used where the light client is not feasible (for chains like Bitcoin which is not programmable, for layer2 like Arbitrum which doesn't have block to provide trust root, and for the dest chain Ethereum which is too expensive to verify trust root and state proof). The packet is verified by TSS nodes instead of the destination chain nodes. 
+* **TSS client for XIBC TSS relayer**: used where the light client is not feasible (for chains like Bitcoin which is not programmable, for layer2 like Arbitrum which doesn't have block to provide trust root, and for the dest chain Ethereum which is too expensive to verify trust root and state proof). The packet is verified by TSS nodes instead of the destination chain nodes.
+   
 **Packet** - Packet module is the entry point for sending and receiving cross-chain packets. It also stores the packets(and the acknowledgement).
 **Routing** - routes each sub-packet(or sub-acknowledgement) to each basic application to execute their own logic.
 **Basic applications** - the cornerstone of application development based on the XIBC protocol. The module contains  token-transfer, remote-contract-call and multi-contract-call, which can be directly adopted for cross-chain transactions or cross-chain dApps development.
