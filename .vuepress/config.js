@@ -73,11 +73,11 @@ module.exports = {
                 },
                 {
                     title: 'Teleport Chain',
-                    path: 'https://chain-doc.teleport.network'
+                    path: 'https://chain-docs.teleport.network'
                 },
                 {
                     title: 'XIBC protocol',
-                    path: 'https://chain-doc.teleport.network/modules/XIBC'
+                    path: 'https://chain-docs.teleport.network/modules/XIBC'
                 },
                 {
                     title: 'Relayers',
