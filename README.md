@@ -10,7 +10,7 @@ sections:
   - title: Teleport blockchain
     desc: Intro teleport block chain.
     url: /blockchain
-    icon: basics
+    icon: teleport-chain
   - title: XIBC protocol
     desc: Intro.
     url: /xibc

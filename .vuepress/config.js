@@ -49,22 +49,10 @@ module.exports = {
         editLinks: true,
         custom: true,
         project: {
-            name: 'Teleport',
-            denom: 'Teleport',
-            ticker: 'Teleport',
-            binary: 'teleport',
-            testnet_denom: 'Tele',
-            testnet_ticker: 'TELE',
-            rpc_url: 'http://localhost:8545/',
-            rpc_url_local: 'http://localhost:8545/',
-            chain_id: '9001',
-            testnet_chain_id: '9000',
-            latest_version: 'v0.1.3',
-            version_number: '1',
-            testnet_version_number: '1',
+            name: 'Teleport'
         },
         logo: {
-            src: '',
+            src: '/logo.png',
         },
         algolia: {
             id: 'BH4D9OD16A',
@@ -77,51 +65,70 @@ module.exports = {
         sidebar: {
             auto: false,
             nav: [{
-                    title: 'Reference',
-                    children: [{
-                            title: 'Introduction',
-                            directory: true,
-                            path: '/intro'
-                        },
-                        {
-                            title: 'Teleport Chain',
-                            path: 'https://github.com/teleport-network/documents'
-                        },
-                        {
-                            title: 'XIBC protocol',
-                            path: 'https://github.com/teleport-network/documents/tree/main/modules/XIBC'
-                        },
-                        {
-                            title: 'Relayers',
-                            directory: true,
-                            path: '/relayers'
-                        },
-                    ]
+                title: 'Reference',
+                children: [{
+                    title: 'Introduction',
+                    directory: true,
+                    path: '/intro'
                 },
                 {
-                    title: 'Resources',
-                    children: [{
-                            title: 'Develop your cross-chain dApps',
-                            path: ''
-                        }
-                    ]
-                }
+                    title: 'Teleport Chain',
+                    path: 'https://chain-doc.teleport.network'
+                },
+                {
+                    title: 'XIBC protocol',
+                    path: 'https://chain-doc.teleport.network/modules/XIBC'
+                },
+                {
+                    title: 'Relayers',
+                    directory: true,
+                    path: '/relayers'
+                },
+                ]
+            },
+                // {
+                //     title: 'Resources',
+                //     children: [{
+                //         title: 'Develop your cross-chain dApps',
+                //         path: ''
+                //     }
+                //     ]
+                // }
             ]
-        },  
+        },
         footer: {
-            logo: '',
+            logo: '/logo.png',
             textLink: {
-
+                text: 'teleport.network',
+                url: 'https://teleport.network'
             },
             services: [
-
+                {
+                    service: 'github',
+                    url: 'https://github.com/teleport-network/teleport'
+                },
+                {
+                    service: "discord",
+                    url: "https://discord.gg/5YQtRDF4Rh",
+                },
+                {
+                    service: "twitter",
+                    url: "https://twitter.com/TeleportChain",
+                },
+                {
+                    service: "telegram",
+                    url: "https://t.me/TeleportNetwork",
+                },
+                {
+                    service: "medium",
+                    url: "https://medium.com/@TeleportNetwork",
+                },
             ],
-            smallprint: 'This website is maintained by Teleport Network Ltd.',
-            links: []
+            smallprint: 'This website is maintained by Teleport Network'
         },
         versions: [{
             "label": "main",
             "key": "main"
-        }, ],
+        },],
     }
 };
