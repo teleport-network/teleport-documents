@@ -10,7 +10,7 @@ A few examples of cross-chain practices:
 
 ### XIBC protocol
 
-[XIBC protocol](../modules/XIBC/README.md) is a standard protocol based on [IBC](https://ibcprotocol.org/) for Teleport bridge implementation including four modules - **client**, **packet**, **routing** and **basic applications**.
+[XIBC protocol](https://chain-doc.teleport.network/modules/XIBC) is a standard protocol based on [IBC](https://ibcprotocol.org/) for Teleport bridge implementation including four modules - **client**, **packet**, **routing** and **basic applications**.
 
 **Client** - stores the trust root and verifies packet(or acknowledgement) commitment proof. Currently there are two types of client implementations for alternative relay approaches:
 * **Light client for XIBC light client relayer**: trustless and permissionless, making sure cross-chain packet is verified on the destination chain; 
