@@ -24,6 +24,8 @@ A few examples of cross-chain practices:
 
 ## Architecture
 
+![avatar](./XIBC.svg)
+
 ### End-to-End Flow
 
 #### Cross-chain interoperability between two chains
