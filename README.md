@@ -7,13 +7,13 @@ sections:
     desc: Read a high-level overview of Teleport and its architecture.
     url: /intro
     icon: teleport-intro
-  - title: Teleport blockchain
-    desc: Intro teleport block chain.
-    url: /blockchain
+  - title: Teleport Chain
+    desc: Intro Teleport blockchain.
+    url: https://chain-docs.teleport.network
     icon: teleport-chain
   - title: XIBC protocol
     desc: Intro.
-    url: /xibc
+    url: https://chain-docs.teleport.network/modules/XIBC/index.html
     icon: xibc
   - title: Relayers
     desc: Read about the core concepts like encoding and events.
