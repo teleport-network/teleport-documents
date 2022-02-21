@@ -12,7 +12,7 @@
       .h2 Explore Teleport
       .p__alt Get familiar with Teleport and explore its main concepts.
       .sections
-        router-link.sections__item(tag="a" :to="section.url" v-for="section in $frontmatter.sections")
+        a.sections__item(tag="a" :href="section.url" v-for="section in $frontmatter.sections")
           component(:is="`tm-icon-${section.icon}`").sections__item__icon
           .sections__item__wrapper
             .sections__item__title {{section.title}}
