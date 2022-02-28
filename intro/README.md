@@ -2,12 +2,6 @@
 
 Teleport Network provides an infrastructure and framework for cross-chain communication. It consists of a decentralized blockchain - Teleport Chain, a cross-chain protocol - XIBC, and developer SDKs for cross-chain dApps integration.
 
-A few examples of cross-chain practices:
-
-* **Cross-Chain DEX** - complete cross-chain token swap and liquidity providing in a single transaction
-* **Cross-Chain Lending Protocol** - supply tokens to borrow other tokens from a different chain
-* **Cross-Chain NFT Market** - cross-chain NFT purchase
-
 ### XIBC protocol
 
 [XIBC protocol](https://chain-docs.teleport.network/modules/XIBC/index.html) is a standard protocol based on [IBC](https://ibcprotocol.org/) for Teleport bridge implementation including four modules - **client**, **packet**, **routing** and **basic applications**.
@@ -23,6 +17,18 @@ A few examples of cross-chain practices:
 **Basic applications** - the cornerstone of application development based on the XIBC protocol. The module contains  token-transfer, remote-contract-call and multi-contract-call, which can be directly adopted for cross-chain transactions or cross-chain dApps development.
 
 ## Architecture
+
+### A Two-tier Platform
+
+![avatar](./hub.svg)
+
+The architecture of the Teleport network consists of two layers. At the foundation is the infrastructure layer, which follows a delegated proof-of-stake (DPoS) blockchain model similar to Cosmos Hub. In addition, it deploys the XIBC cross-chain protocol (chain module and smart contract) and developer SDKs for application builders to implement cross-chain dApps integration.
+
+Next is the application layer where developers actually deploy the cross-chain applications. Some common examples include:
+
+* **Cross-Chain DEX** - complete cross-chain token swap and liquidity providing in a single transaction
+* **Cross-Chain Lending Protocol** - supply tokens to borrow other tokens from a different chain
+* **Cross-Chain NFT Market** - cross-chain NFT purchase
 
 ### End-to-End Flow
 

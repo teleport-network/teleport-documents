@@ -5,7 +5,7 @@ description: Teleport Network provides infrastructure and framework for cross-ch
 sections:
   - title: Introduction
     desc: Read a high-level overview of Teleport and its architecture.
-    url: /intro
+    url: /intro/index.html
     icon: teleport-intro
   - title: Teleport Chain
     desc: Intro Teleport blockchain.
