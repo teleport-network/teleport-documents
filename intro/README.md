@@ -75,7 +75,7 @@ XIBC protocol basic application contract consists of three parts: token-transfer
 
 Developers can use the combination of the above three basic application contracts to develop any cross-chain interoperable contracts.
 
-Below shows the IBC protocol application design of XIBC step by step as well as how to develop an application. 
+Below shows the XIBC cross-chain application design step by step. 
 
 #### Remote contract-call with token transfer
 
