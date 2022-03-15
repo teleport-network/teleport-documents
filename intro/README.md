@@ -20,9 +20,9 @@ Teleport Network provides an infrastructure and framework for cross-chain commun
 
 ### A Two-tier Platform
 
-![avatar](./hub.svg)
-
 The architecture of the Teleport network consists of two layers. At the foundation is the infrastructure layer, which follows a delegated proof-of-stake (DPoS) blockchain model similar to Cosmos Hub. In addition, it deploys the XIBC cross-chain protocol (chain module and smart contract) and developer SDKs for application builders to implement cross-chain dApps integration.
+
+![avatar](./hub.svg)
 
 Next is the application layer where developers actually deploy the cross-chain applications. Some common examples include:
 
