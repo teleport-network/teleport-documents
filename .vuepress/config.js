@@ -66,7 +66,8 @@ module.exports = {
             auto: false,
             nav: [{
                 title: 'Reference',
-                children: [{
+                children: [
+                    {
                     title: 'Introduction',
                     directory: true,
                     path: '/intro'
@@ -86,14 +87,53 @@ module.exports = {
                 },
                 ]
             },
-                // {
-                //     title: 'Resources',
-                //     children: [{
-                //         title: 'Develop your cross-chain dApps',
-                //         path: ''
-                //     }
-                //     ]
-                // }
+            {
+                title: 'Developer Docs',
+                children:[
+                    {
+                        title: 'Concepts',
+                        directory: true,
+                        path: '/developer/1Concepts'
+
+                    },
+                    {
+                        title: 'Integration Guide(Testnet)',
+                        directory: true,
+                        path: '/developer/2Integration Guide (Testnet)'
+                    },
+                    {
+                        title: 'Fees',
+                        directory: true,
+                        path: '/developer/Fees'
+                    },
+                    {
+                        title: 'Cross-Chain Tracking',
+                        directory: true,
+                        path: '/developer/Cross-Chain Tracking'
+                    },
+                    {
+                        title: 'Error Handling',
+                        directory: true,
+                        path: '/developer/Error Handling'
+                    },
+                    {
+                        title: 'Code Examples',
+                        directory: true,
+                        path: '/developer/Code Examples'
+                    },
+                    {
+                        title: 'Resources',
+                        directory: true,
+                        path: '/developer/Resources'
+                    },
+                    {
+                        title: 'Version',
+                        directory: true,
+                        path: '/developer/Version'
+                    }
+                ]
+            }
+            
             ]
         },
         footer: {

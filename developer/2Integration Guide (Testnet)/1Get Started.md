@@ -1,18 +1,18 @@
-# Integration Guide (Currently on Testnet)
+# Getting Started
 
 ## Teleport supports different cross-chain approaches which include:
 
-[1-Hop Chain A to Chain B](https://www.notion.so/1-Hop-Chain-A-to-Chain-B-d9acc846a8474dc4b5a10bec1afc0ad2)
+[1-Hop Chain A to Chain B]()
 
-[2-Hop Teleport as Relay Chain](https://www.notion.so/2-Hop-Teleport-as-Relay-Chain-06a14ab02d6a4037a898ee9c46fe4424)
+[2-Hop Teleport as Relay Chain]()
 
-[2-Hop Teleport Agent Pool](https://www.notion.so/2-Hop-Teleport-Agent-Pool-4a4b5ea94394474e93ac4d8bd31694c6)
+[2-Hop Teleport Agent Pool]()
 
 Based on your application needs, you can select different approaches to develop and get the corresponding guide.
 
-## The difference between them
+## The difference between them 
 
-![page19.png](3types.png)
+![Difference](./3types.jpg)
 
 ### 1-Hop 
 
@@ -28,7 +28,7 @@ A. ChainA to ChainB specific Assets bridge with own liquidity
 
 B. Peg Blue-Chip Assets on Teleport Chain
 
-C. Cross-chain contract call
+C. [Cross-chain contract call](./../Code%20Examples/1.1-Hop%20PingPong.md)
 
 ### 2-Hop with teleport as Relay Chain
 
@@ -50,4 +50,4 @@ examples:
 
 A. Official Teleport Bridge：[https://bridge.testnet.teleport.network/](https://bridge.testnet.teleport.network/)
 
-B. Possum: Cross-chain swap using teleport liquidity
+B. Cross-chain swap using teleport liquidity
