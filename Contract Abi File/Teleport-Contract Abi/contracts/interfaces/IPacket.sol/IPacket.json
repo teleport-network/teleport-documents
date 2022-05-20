@@ -1,0 +1,95 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            }
+        ],
+        "name": "getAckStatus",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            }
+        ],
+        "name": "getNextSequenceSend",
+        "outputs": [
+            {
+                "internalType": "uint64",
+                "name": "",
+                "type": "uint64"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Fee",
+                "name": "fee",
+                "type": "tuple"
+            }
+        ],
+        "name": "setPacketFee",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    }
+]

@@ -1,0 +1,84 @@
+[
+    {
+        "inputs": [],
+        "name": "getChainName",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "chainName",
+                "type": "string"
+            }
+        ],
+        "name": "getClient",
+        "outputs": [
+            {
+                "internalType": "contract IClient",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "chainName",
+                "type": "string"
+            }
+        ],
+        "name": "getClientType",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Type",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "chainName",
+                "type": "string"
+            }
+        ],
+        "name": "getLatestHeight",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

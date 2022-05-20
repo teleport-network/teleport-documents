@@ -1,0 +1,54 @@
+[
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint8[]",
+                        "name": "functions",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "bytes[]",
+                        "name": "data",
+                        "type": "bytes[]"
+                    }
+                ],
+                "internalType": "struct MultiCallDataTypes.MultiCallData",
+                "name": "multiCallData",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Fee",
+                "name": "fee",
+                "type": "tuple"
+            }
+        ],
+        "name": "multiCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    }
+]

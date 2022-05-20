@@ -1,0 +1,426 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "headerBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "checkHeaderAndUpdateState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "clientState",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "chain_id",
+                "type": "string"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "numerator",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "denominator",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Fraction.Data",
+                "name": "trust_level",
+                "type": "tuple"
+            },
+            {
+                "internalType": "int64",
+                "name": "trusting_period",
+                "type": "int64"
+            },
+            {
+                "internalType": "int64",
+                "name": "unbonding_period",
+                "type": "int64"
+            },
+            {
+                "internalType": "int64",
+                "name": "max_clock_drift",
+                "type": "int64"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "latest_height",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "bytes",
+                        "name": "key_prefix",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct MerklePrefix.Data",
+                "name": "merkle_prefix",
+                "type": "tuple"
+            },
+            {
+                "internalType": "uint64",
+                "name": "time_delay",
+                "type": "uint64"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getClientType",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Type",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            }
+        ],
+        "name": "getConsensusState",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "int64",
+                                "name": "secs",
+                                "type": "int64"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "nanos",
+                                "type": "int64"
+                            }
+                        ],
+                        "internalType": "struct Timestamp.Data",
+                        "name": "timestamp",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "root",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "next_validators_hash",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct ConsensusState.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getLatestHeight",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "clientManagerAddr",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "clientStateBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "consensusStateBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "initializeState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "status",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Status",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "clientStateBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "consensusStateBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "upgrade",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "proof",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "bytes",
+                "name": "acknowledgement",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyPacketAcknowledgement",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "proof",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "bytes",
+                "name": "commitmentBytes",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyPacketCommitment",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

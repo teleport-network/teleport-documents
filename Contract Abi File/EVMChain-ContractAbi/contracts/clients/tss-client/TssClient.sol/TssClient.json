@@ -1,0 +1,335 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "headerBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "checkHeaderAndUpdateState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "clientState",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "tss_address",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "pubkey",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getClientState",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tss_address",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "pubkey",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "bytes[]",
+                        "name": "part_pubkeys",
+                        "type": "bytes[]"
+                    }
+                ],
+                "internalType": "struct TssClient.ClientState",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getClientType",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Type",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getLatestHeight",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "clientManagerAddr",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "clientStateBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "consensusStateBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "initializeState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "status",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Status",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "clientStateBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "consensusStateBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "upgrade",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "proof",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "bytes",
+                "name": "acknowledgement",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyPacketAcknowledgement",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "proof",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "bytes",
+                "name": "commitmentBytes",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyPacketCommitment",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

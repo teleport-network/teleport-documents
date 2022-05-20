@@ -1,0 +1,437 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "headerBz",
+                "type": "bytes"
+            }
+        ],
+        "name": "decode",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "components": [
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "uint64",
+                                                "name": "height",
+                                                "type": "uint64"
+                                            },
+                                            {
+                                                "internalType": "uint64",
+                                                "name": "app",
+                                                "type": "uint64"
+                                            }
+                                        ],
+                                        "internalType": "struct Consensus.Data",
+                                        "name": "version",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "internalType": "string",
+                                        "name": "chain_id",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "height",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "int64",
+                                                "name": "secs",
+                                                "type": "int64"
+                                            },
+                                            {
+                                                "internalType": "int64",
+                                                "name": "nanos",
+                                                "type": "int64"
+                                            }
+                                        ],
+                                        "internalType": "struct Timestamp.Data",
+                                        "name": "time",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "hash",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "components": [
+                                                    {
+                                                        "internalType": "uint64",
+                                                        "name": "total",
+                                                        "type": "uint64"
+                                                    },
+                                                    {
+                                                        "internalType": "bytes",
+                                                        "name": "hash",
+                                                        "type": "bytes"
+                                                    }
+                                                ],
+                                                "internalType": "struct PartSetHeader.Data",
+                                                "name": "part_set_header",
+                                                "type": "tuple"
+                                            }
+                                        ],
+                                        "internalType": "struct BlockID.Data",
+                                        "name": "last_block_id",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "last_commit_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "data_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "validators_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "next_validators_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "consensus_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "app_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "last_results_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "evidence_hash",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "proposer_address",
+                                        "type": "bytes"
+                                    }
+                                ],
+                                "internalType": "struct TmHeader.Data",
+                                "name": "header",
+                                "type": "tuple"
+                            },
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "int64",
+                                        "name": "height",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "round",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "hash",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "components": [
+                                                    {
+                                                        "internalType": "uint64",
+                                                        "name": "total",
+                                                        "type": "uint64"
+                                                    },
+                                                    {
+                                                        "internalType": "bytes",
+                                                        "name": "hash",
+                                                        "type": "bytes"
+                                                    }
+                                                ],
+                                                "internalType": "struct PartSetHeader.Data",
+                                                "name": "part_set_header",
+                                                "type": "tuple"
+                                            }
+                                        ],
+                                        "internalType": "struct BlockID.Data",
+                                        "name": "block_id",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "enum TYPES_PROTO_GLOBAL_ENUMS.BlockIDFlag",
+                                                "name": "block_id_flag",
+                                                "type": "TYPES_PROTO_GLOBAL_ENUMS.BlockIDFlag"
+                                            },
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "validator_address",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "components": [
+                                                    {
+                                                        "internalType": "int64",
+                                                        "name": "secs",
+                                                        "type": "int64"
+                                                    },
+                                                    {
+                                                        "internalType": "int64",
+                                                        "name": "nanos",
+                                                        "type": "int64"
+                                                    }
+                                                ],
+                                                "internalType": "struct Timestamp.Data",
+                                                "name": "timestamp",
+                                                "type": "tuple"
+                                            },
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "signature",
+                                                "type": "bytes"
+                                            }
+                                        ],
+                                        "internalType": "struct CommitSig.Data[]",
+                                        "name": "signatures",
+                                        "type": "tuple[]"
+                                    }
+                                ],
+                                "internalType": "struct Commit.Data",
+                                "name": "commit",
+                                "type": "tuple"
+                            }
+                        ],
+                        "internalType": "struct SignedHeader.Data",
+                        "name": "signed_header",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "addr",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "ed25519",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "secp256k1",
+                                                "type": "bytes"
+                                            }
+                                        ],
+                                        "internalType": "struct PublicKey.Data",
+                                        "name": "pub_key",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "voting_power",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "proposer_priority",
+                                        "type": "int64"
+                                    }
+                                ],
+                                "internalType": "struct Validator.Data[]",
+                                "name": "validators",
+                                "type": "tuple[]"
+                            },
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "addr",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "ed25519",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "secp256k1",
+                                                "type": "bytes"
+                                            }
+                                        ],
+                                        "internalType": "struct PublicKey.Data",
+                                        "name": "pub_key",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "voting_power",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "proposer_priority",
+                                        "type": "int64"
+                                    }
+                                ],
+                                "internalType": "struct Validator.Data",
+                                "name": "proposer",
+                                "type": "tuple"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "total_voting_power",
+                                "type": "int64"
+                            }
+                        ],
+                        "internalType": "struct ValidatorSet.Data",
+                        "name": "validator_set",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint64",
+                                "name": "revision_number",
+                                "type": "uint64"
+                            },
+                            {
+                                "internalType": "uint64",
+                                "name": "revision_height",
+                                "type": "uint64"
+                            }
+                        ],
+                        "internalType": "struct Height.Data",
+                        "name": "trusted_height",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "addr",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "ed25519",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "secp256k1",
+                                                "type": "bytes"
+                                            }
+                                        ],
+                                        "internalType": "struct PublicKey.Data",
+                                        "name": "pub_key",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "voting_power",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "proposer_priority",
+                                        "type": "int64"
+                                    }
+                                ],
+                                "internalType": "struct Validator.Data[]",
+                                "name": "validators",
+                                "type": "tuple[]"
+                            },
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "addr",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "components": [
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "ed25519",
+                                                "type": "bytes"
+                                            },
+                                            {
+                                                "internalType": "bytes",
+                                                "name": "secp256k1",
+                                                "type": "bytes"
+                                            }
+                                        ],
+                                        "internalType": "struct PublicKey.Data",
+                                        "name": "pub_key",
+                                        "type": "tuple"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "voting_power",
+                                        "type": "int64"
+                                    },
+                                    {
+                                        "internalType": "int64",
+                                        "name": "proposer_priority",
+                                        "type": "int64"
+                                    }
+                                ],
+                                "internalType": "struct Validator.Data",
+                                "name": "proposer",
+                                "type": "tuple"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "total_voting_power",
+                                "type": "int64"
+                            }
+                        ],
+                        "internalType": "struct ValidatorSet.Data",
+                        "name": "trusted_validators",
+                        "type": "tuple"
+                    }
+                ],
+                "internalType": "struct Header.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    }
+]
