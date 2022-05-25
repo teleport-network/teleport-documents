@@ -1,10 +1,10 @@
 # Step1: Construct Cross-Chain Packet DataType
 
-Teleport’s strong XIBC infrastructure supports you to perform both remote contract calls and cross-chain transfers. To specify actions, the first thing you need to do is to construct cross-chain data. 
+Teleport’s XIBC infrastructure allows for the execution of both remote contract calls and cross-chain transfers. To specify actions, the first requirement is to construct cross-chain data. 
 
-Then you can use the data to invoke XIBC’s application contracts to start the process.
+Then the data can be used to invoke XIBC’s application contracts and start the process.
 
-Here is the dataType library you should include in your codebase, you can find all these data here:
+Below is the dataType library which should be included in your codebase:
 
 [xibc-contracts/evm/contracts/libraries/app at main · teleport-network/xibc-contracts](https://github.com/teleport-network/xibc-contracts/tree/main/evm/contracts/libraries/app)
 
@@ -54,14 +54,14 @@ struct MultiCallData {
 
 ```
 
-Here is a diagram to explain the MulticallData Structure.
+The diagram below outlines the MulticallData Structure.
 
 ![MultiCall Data Struture](./MultiData.png)
 
-In the functions list, you can specify how many actions in want to include in this Multicall. (We would possibly limit this to 1 RCC and 1 Transfer max).
+In the functions list, the number of actions to be included in the Multicall can be specified. (This may possibly be limited to 1 RCC and 1 Transfer max).
 
 0 means Transfer action and 1 means RCC action.
 
 The data list should be filled with the corresponding data type (MulticallDataType.TransferData/RCCData).
 
-Now you have the Data, you can use the data as a parameter to Invoke the XIBC application Contract.
+Now that you have the Data, you can use the data as a parameter to Invoke the XIBC application Contract.
