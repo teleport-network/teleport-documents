@@ -2,7 +2,7 @@
 
 ## General Process (1-Hop & 2-Hop with Relay Chain)
 
-When invoking the XIBC application contracts, you need to specify the "fee" parameter.
+When invoking the XIBC application contracts, the "fee" parameter must be specified.
 
 ```jsx
 function multiCall(
@@ -21,7 +21,7 @@ function sendTransfer(
     )
 ```
 
-This is a data structure shown in the [Packet Library]():
+This is an example of the data structure shown in the [Packet Library]():
 
 ```jsx
 struct Fee {
@@ -30,7 +30,7 @@ struct Fee {
     }
 ```
 
-We currently support the bridged token as Fee.
+We currently support the bridged token as a form of fee.
 
 See the [bridge token list]() here.
 
