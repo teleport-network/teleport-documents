@@ -19,4 +19,4 @@ function addPacketFee(
 
 You will need some Packet info include sourceChainName,destination ChainName and sequence to specify which packet you want to boost.
 
-You can learn how to [get these info here](../Cross-Chain%20Tracking/1Track.md).
+You can learn how to [get these info here](../Cross-Chain-Tracking/1Track.md).

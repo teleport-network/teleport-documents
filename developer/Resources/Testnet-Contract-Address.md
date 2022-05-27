@@ -54,7 +54,7 @@ USDT 0x80aae951ac9bc48f42b950fe33385e8900149912
 
 ETH 0xb2b75c5c11b03be8729d5c2761f306e86d492b46
 
-DEC10 0x73c02c4afd11015d34033485e853257ee5b1b3c5
+
 
 ### Ethereum Rinkby (ChainName: rinkeby):
 
@@ -66,7 +66,7 @@ USDT 0xb0dfaaa92e4f3667758f2a864d50f94e8ac7a56b
 
 TELE 0x302e7fcc47420b8c239508dd98a2ca70a5ea2d4e
 
-DEC6 0xa801c61236c5ca55107a17329b8abbd337d63e1d
+
 
 ### BNB chain testnet (ChainName: bsctest):
 
@@ -78,7 +78,7 @@ USDT 0xb425da01b4a353ff9f36f6cae4acd32911046fe5
 
 TELE 0x412bf11620bb0d5dd7720b7bf00277a128da331b
 
-DEC8 0x9bb6a241bafea4e1d8ff1bb926957f87f4fcde76
+
 
 ### Arbitrum testnet (ChainName: arbitrum):
 
@@ -89,5 +89,3 @@ TEST 0x27dbec7d20f256e79d2db7de3df56f03c82bb47f
 USDT 0x2436de6b227eefc84245260f74f096136b217093
 
 TELE 0x7c9e6c1bfc415f3b411e877936c978b16f1ed77b
-
-DEC6 0xc5c8c23176b94e1add272659cb2211b4db148899

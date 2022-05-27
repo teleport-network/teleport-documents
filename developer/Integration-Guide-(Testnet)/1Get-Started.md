@@ -2,11 +2,11 @@
 
 ## Teleport supports different cross-chain approaches which include:
 
-[1-Hop Chain A to Chain B]()
+1-Hop: Chain A to Chain B
 
-[2-Hop Teleport as Relay Chain]()
+2-Hop: Teleport as Relay Chain
 
-[2-Hop Teleport Agent Pool]()
+2-Hop: Teleport Agent Pool
 
 Based on your application needs, you can select different approaches to develop and get the corresponding guide.
 
@@ -28,7 +28,15 @@ A. ChainA to ChainB specific Assets bridge with own liquidity
 
 B. Peg Blue-Chip Assets on Teleport Chain
 
-C. [Cross-chain contract call](./../Code%20Examples/1.1-Hop%20PingPong.md)
+C. [Cross-chain contract call](./../Code-Examples/1.1-HopPingPong.md)
+
+In practice, you can using this mode by simply specify the following 3 parameters:
+
+SourceChain: Chain A
+
+RelayChain: '' (Yes,this means without relay chain)
+
+destChain: Chain B
 
 ### 2-Hop with teleport as Relay Chain
 
@@ -40,6 +48,14 @@ A. Universal assets bridge with third-party liquidity
 
 B. cross-chain swap/lend/farm based on A
 
+In practice, you can using this mode by simply specify the following 3 parameters:
+
+SourceChain: Chain A
+
+RelayChain: teleport
+
+destChain: Chain B
+
 ### 2-Hop as Transportation Hub
 
 On the basis of the strong scalability, this approach enables user applications to handle additional logic on the Teleport chain as a relay chain and, more importantly, to take advantage of the massive liquidity provided by Teleport.
@@ -48,6 +64,24 @@ In this model, cross-chain messages are re-packet through the Teleport network (
 
 examples:
 
-A. Official Teleport Bridge：[https://bridge.testnet.teleport.network/](https://bridge.testnet.teleport.network/)
+A. Official Teleport Bridge：[Code Example](../Code-Examples/4.2-HopAgent(Official-Bridge).md)
 
 B. Cross-chain swap using teleport liquidity
+
+In practice, you can think this mode as the combination of two 1-Hops, so 
+
+First Hop:
+
+SourceChain: Chain A
+
+RelayChain: ''
+
+destChain: teleport
+
+Second Hop:
+
+SourceChain: teleport
+
+RealyChain: ''
+
+destChain: Chain B

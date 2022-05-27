@@ -14,9 +14,9 @@ Hop-2 teleport - > rinkeby generates Packet1 {teleport, rinkeby, sequence1, data
 
 We can see that during the procedure, there is no actual association between the two 1-hops except data. But we need both these two packets to be succeed to confirm our total-actions to be succeed. So we need to bind these two packets to a single 2-Hop action.
 
-Therefore, we need to give the unique identifier associated with packet0 when the [Agent contract]() on teleport Chain receives packet0. 
+Therefore, we need to give the unique identifier associated with packet0 when the [Agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol) on teleport Chain receives packet0. 
 
-Since the sequence of the corresponding packet transmission direction is unique, we can add a event in our [agent contract]():
+Since the sequence of the corresponding packet transmission direction is unique, we can add a event in our [agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol):
 
 ```solidity
 event SendEvent( 
@@ -35,4 +35,4 @@ Then by checking the status of these two packet on destination chain, we can kno
 
 Our Official bridge using the 2-Hop Agent mode, so you can take our official bridge code base as an example to learn.
 
-Especially the [Proxy contract]() on evm chain and [Agent contract]() on teleport chain
+Especially the [Proxy contract](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/agent/Proxy.sol) on evm chain and [Agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol) on teleport chain

@@ -93,13 +93,13 @@ module.exports = {
                     {
                         title: 'Concepts',
                         directory: true,
-                        path: '/developer/1Concepts'
+                        path: '/developer/Concepts'
 
                     },
                     {
                         title: 'Integration Guide(Testnet)',
                         directory: true,
-                        path: '/developer/2Integration Guide (Testnet)'
+                        path: '/developer/Integration-Guide-(Testnet)'
                     },
                     {
                         title: 'Fees',
@@ -109,17 +109,17 @@ module.exports = {
                     {
                         title: 'Cross-Chain Tracking',
                         directory: true,
-                        path: '/developer/Cross-Chain Tracking'
+                        path: '/developer/Cross-Chain-Tracking'
                     },
                     {
                         title: 'Error Handling',
                         directory: true,
-                        path: '/developer/Error Handling'
+                        path: '/developer/Error-Handling'
                     },
                     {
                         title: 'Code Examples',
                         directory: true,
-                        path: '/developer/Code Examples'
+                        path: '/developer/Code-Examples'
                     },
                     {
                         title: 'Resources',

@@ -44,6 +44,6 @@ function multiCall(
 Besides CrossChain Data, you also need to specify the cross-chain fees to cover the gas spend during the process.
 
 For how our fee system works, please check this:
-[Cross-chain Fees Logic](../Fees/1Fees%20System.md)
+[Cross-chain Fees Logic](../Fees/1Fees-System.md)
 
-It maybe helpful to check the [XIBC contract abi](../Resources/Testnet%20Contract%20Abi.md)
+It maybe helpful to check the [XIBC contract abi](../Resources/Testnet-Contract-Abi.md)
