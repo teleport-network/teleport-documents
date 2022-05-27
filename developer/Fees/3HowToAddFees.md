@@ -1,8 +1,8 @@
 # How to Add Fees
 
-In the worst case, somehow user applications paid fees based on the suggestions, but due to some unexpected reasons like extreme market change or sudden gas rise up. The fees paid can't cover the gas cost. So the Relayer will not relay this action.
+In a worst case scenario where market conditions are extreme or gas suddenly rises and the fees estimated and paid by the user application cannot cover the gas cost, the relayer will not relay the action. 
 
-Under this situation, you can add more fees for your cross-chain action (Packet).
+In this situation, additional fees can be added to the cross-chain transaction (Packet).
 
 Call the addPacketFee function in Packet.sol to 
 
@@ -17,6 +17,6 @@ function addPacketFee(
 
 ```
 
-You will need some Packet info include sourceChainName,destination ChainName and sequence to specify which packet you want to boost.
+Some Packet info will be required such as the sourceChainName,destination ChainName and sequence to specify which packet you want to boost.
 
 You can learn how to [get these info here](../Cross-Chain-Tracking/1Track.md).

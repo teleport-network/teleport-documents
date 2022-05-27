@@ -2,7 +2,7 @@
 
 ## General Process (1-Hop & 2-Hop with Relay Chain)
 
-When invoking the XIBC application contracts, you need to specify the "fee" parameter.
+When invoking the XIBC application contracts, the "fee" parameter must be specified.
 
 ```solidity
 function multiCall(
@@ -21,7 +21,7 @@ function sendTransfer(
     )
 ```
 
-This is a data structure shown in the [Packet Library](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/libraries/packet/Packet.sol):
+This is the data structure shown in the [Packet Library](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/libraries/packet/Packet.sol):
 
 ```solidity
 struct Fee {
@@ -30,7 +30,7 @@ struct Fee {
     }
 ```
 
-We currently support the bridged token as Fee.
+We currently support the bridged token as a form of fee.
 
 
 ## 2-Hop Agent Mode

@@ -1,8 +1,8 @@
 # Step2: Call the XIBC application contracts 
 
-To start a cross-chain process, you need to interact with our XIBC application contract deployed on different Chains.
+To start the cross-chain process, you need to interact with our XIBC application contract which is deployed on different chains.
 
-Based on different actions, you need to interact with the following contracts:
+Based on different actions, you need to interact with the following contracts respectively:
 
 
 [transfer.sol](https://github.com/teleport-network/xibc-contracts/tree/main/evm/contracts/apps/multicall)
@@ -41,9 +41,9 @@ function multiCall(
     )
 ```
 
-Besides CrossChain Data, you also need to specify the cross-chain fees to cover the gas spend during the process.
+In addition to CrossChain Data, you also need to specify the cross-chain fees to cover the gas spent during the transaction.
 
-For how our fee system works, please check this:
+For more information on how our fee system is structured, please review the information linked:
 [Cross-chain Fees Logic](../Fees/1Fees-System.md)
 
-It maybe helpful to check the [XIBC contract abi](../Resources/Testnet-Contract-Abi.md)
+It would also be helpful to check the [XIBC contract abi](../Resources/Testnet-Contract-Abi.md)

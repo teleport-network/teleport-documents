@@ -2,21 +2,21 @@
 
 
 
-In the 2-Hop Agent flow like:
+In the 2-Hop Agent Flow:
 
-BSC -> Teleport -> rinkeby
+BSC -> Teleport -> Rinkeby
 
-The Agent performs two 1-Hop operations to achieve the purpose of 2-hop. 
+The Agent performs two 1-Hop operations to achieve the outcome of a 2-hop. 
 
-Hop-1 BSC -> teleport generates Packet0 {bsctest, teleport, sequence0, data0}, 
+Hop-1 BSC -> Teleport generates Packet0 {bsctest, teleport, sequence0, data0}, 
 
-Hop-2 teleport - > rinkeby generates Packet1 {teleport, rinkeby, sequence1, data1
+Hop-2 Teleport - > Rinkeby generates Packet1 {teleport, rinkeby, sequence1, data1
 
-We can see that during the procedure, there is no actual association between the two 1-hops except data. But we need both these two packets to be succeed to confirm our total-actions to be succeed. So we need to bind these two packets to a single 2-Hop action.
+During the procedure, there is no actual association between the two 1-hop operations except for the data. However, both packets are required to succeed in order to confirm that the total-actions of the transfer succeed. Therefore, both packets need to be bound to a single 2-Hop action.
 
-Therefore, we need to give the unique identifier associated with packet0 when the [Agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol) on teleport Chain receives packet0. 
+To accomplish this, a unique identifier that is associated with packet0 is created when the [Agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol) on Teleport Chain receives packet0. 
 
-Since the sequence of the corresponding packet transmission direction is unique, we can add a event in our [agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol):
+SSince the sequence of the corresponding packet transmission direction is unique, we can add an event in our [Agent contract](https://github.com/teleport-network/xibc-contracts/blob/main/teleport/contracts/apps/agent/Agent.sol):
 
 ```solidity
 event SendEvent( 
@@ -25,7 +25,7 @@ event SendEvent(
     packet1.sequence )
 ```
 
-The service applications can monitor for this event and using to packet0 info (srcChain,destChain,sequence) to get the connection between Packet 0 and Packet 1. If you don't know how to do this, please check the [last chapter](./ACK.md)
+The service application can monitor for this event and using the packet0 info (srcChain,destChain,sequence), it can attain the connection between Packet 0 and Packet 1. For more information on how to do this, please check the [last chapter](./1Track.md)
 
 Then by checking the status of these two packet on destination chain, we can know the status of this 2-Hop Process.
 
