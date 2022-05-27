@@ -39,7 +39,7 @@ It will check the ackStatus mapping and return the following:
 mapping(bytes => uint8) public ackStatus; // 0 => not found , 1 => success , 2 => err
 
 ```
-If you don't know how to the parameters, check the ![Track your Packet](../Cross-Chain-Tracking/1Track.md) section.
+If you don't know how to the parameters, check the [Track your Packet](../Cross-Chain-Tracking/1Track.md) section.
 
 
 ## How to get your acks
@@ -52,7 +52,7 @@ mapping(bytes32 => bytes) public override acks;
 
 ```
 
-To get the acks, you need to ![get your packet info](../Cross-Chain-Tracking/1Track.md) first. And construct the keys by encode your cross-chain data.
+To get the acks, you need to [get your packet info](../Cross-Chain-Tracking/1Track.md) first. And construct the keys by encode your cross-chain data.
 
 
 ![How to reslove ACK](./ACKProcess.png)

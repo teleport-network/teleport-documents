@@ -47,7 +47,7 @@ message Packet {
 }
 ```
 
-Contracts [send custom application data](../2Integration-Guide-(Testnet)/2DataType.md) to each other inside the **data_list []byte** field of the XIBC sub-packet. Sub-packet data is completely opaque to XIBC handlers. The sender contract must encode their application-specific packet information into the Data field of packets;
+Contracts [send custom application data](../Integration-Guide-(Testnet)/2DataType.md) to each other inside the **data_list []byte** field of the XIBC sub-packet. Sub-packet data is completely opaque to XIBC handlers. The sender contract must encode their application-specific packet information into the Data field of packets;
 
 ## XIBC applications
 
@@ -71,7 +71,7 @@ In most cases, if we want to acheieve some goals, there should be at least one a
 
 ## Proxy
 
-In the best practice, developers can deploy a Proxy contract to make the process easier. For example, check out our official bridges [Proxy Contract]().
+In the best practice, developers can deploy a Proxy contract to make the process easier. For example, check out our official bridges [Proxy Contract](https://github.com/teleport-network/xibc-contracts/blob/main/evm/contracts/apps/agent/Proxy.sol).
 
 The contract did several things include:
 
@@ -84,7 +84,7 @@ The contract did several things include:
 
 ## Agent
 
-We have mentiond in the [Get Started](../2Integration-20Guide-20(Testnet)/1Get-Started.md) Sections that teleport support three different ways to integrate.
+We have mentiond in the [Get Started](../Integration-Guide-(Testnet)/1Get-Started.md) Sections that teleport support three different ways to integrate.
 
 The agent mode is the more complex one, in this mode, unlike the relay chain mode, you should deploy an agent contract yourself to help you handle the extra logic on realy chain and start the cross-chain process from teleport to destination chain.
 
@@ -96,13 +96,19 @@ For example, our official bsc-eth bridge implementation process:
 4. the send() function will using the assets and fees transferred to start a cross-chain transfer to move the assets to the user address on destination chain. 
 
 You can see that the assets here have three verisons:
+
 1.Source Chain version
+
 2.Destination Chain version
+
 3.Teleport Chain version
 
 You can see this process as a combination of two process:
-1.SourceChain -> Teleport
+
+1.Source Chain -> Teleport
+
 2.Teleport -> Destination Chain
+
 
 Using agent mode can utilize you the liquidity on Teleport Chain, and you can also do some extra logic on the relay chain for example swap the assets to another assets using the teleport-chain's DEX.
 

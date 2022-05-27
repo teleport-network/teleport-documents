@@ -34,7 +34,7 @@ In practice, you can using this mode by simply specify the following 3 parameter
 
 SourceChain: Chain A
 
-RelayChain: '' (Yes,this means without relay chain)
+RelayChain:  ''     (Yes, this means without relay chain)
 
 destChain: Chain B
 
