@@ -1,3 +1,6 @@
+<!--
+order：3
+-->
 # Step2: Call the XIBC application contracts 
 
 To start the cross-chain process, you need to interact with our XIBC application contract which is deployed on different chains.

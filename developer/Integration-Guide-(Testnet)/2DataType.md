@@ -1,3 +1,6 @@
+<!--
+order：2
+-->
 # Step1: Construct Cross-Chain Packet DataType
 
 Teleport’s XIBC infrastructure allows for the execution of both remote contract calls and cross-chain transfers. To specify actions, the first requirement is to construct cross-chain data. 

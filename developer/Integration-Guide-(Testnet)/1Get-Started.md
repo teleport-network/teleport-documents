@@ -1,3 +1,6 @@
+<!--
+order：1
+-->
 # Getting Started
 
 ## Teleport supports different cross-chain approaches which include:
