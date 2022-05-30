@@ -1,0 +1,9 @@
+[
+    {
+        "inputs": [],
+        "name": "getether",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

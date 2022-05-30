@@ -1,0 +1,380 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "dataHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes",
+                "name": "ack",
+                "type": "bytes"
+            }
+        ],
+        "name": "Ack",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "srcChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "sequence",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "sender",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct RCC.sendPacket",
+                "name": "packet",
+                "type": "tuple"
+            }
+        ],
+        "name": "SendPacket",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "acks",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getLatestPacket",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "srcChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "sequence",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "sender",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.PacketData",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "latestPacket",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "srcChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "string",
+                "name": "sender",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "contractAddress",
+                "type": "string"
+            },
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "multiCallContractAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "dataHash",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes",
+                "name": "result",
+                "type": "bytes"
+            }
+        ],
+        "name": "onAcknowledgementPacket",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "srcChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "sequence",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "sender",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.PacketData",
+                "name": "packet",
+                "type": "tuple"
+            }
+        ],
+        "name": "onRecvPacket",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "bytes",
+                        "name": "result",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "message",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct Result.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "packetContractAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "rccMoudleAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "sender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.RCCDataMulti",
+                "name": "rccData",
+                "type": "tuple"
+            }
+        ],
+        "name": "remoteContractCall",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.RCCData",
+                "name": "rccData",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Fee",
+                "name": "fee",
+                "type": "tuple"
+            }
+        ],
+        "name": "sendRemoteContractCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    }
+]

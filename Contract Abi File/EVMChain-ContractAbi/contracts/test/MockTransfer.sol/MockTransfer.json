@@ -1,0 +1,736 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "BIND_TOKEN_ROLE",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "MULTISEND_ROLE",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bool",
+                "name": "success",
+                "type": "bool"
+            },
+            {
+                "internalType": "string",
+                "name": "errMsg",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "relayer",
+                "type": "string"
+            }
+        ],
+        "name": "NewAcknowledgement",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes[]",
+                "name": "results",
+                "type": "bytes[]"
+            },
+            {
+                "internalType": "string",
+                "name": "message",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "relayer",
+                "type": "string"
+            }
+        ],
+        "name": "NewAcknowledgementTest",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "accessManager",
+        "outputs": [
+            {
+                "internalType": "contract IAccessManager",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "oriToken",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "oriChain",
+                "type": "string"
+            }
+        ],
+        "name": "bindToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "name": "bindingTraces",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "bindings",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "oriChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "oriToken",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "bound",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "boundTokens",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "clientManager",
+        "outputs": [
+            {
+                "internalType": "contract IClientManager",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenAddress",
+                "type": "address"
+            }
+        ],
+        "name": "disableTimeBasedSupplyLimit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "timePeriod",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "timeBasedLimit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "enableTimeBasedSupplyLimit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "token",
+                "type": "address"
+            }
+        ],
+        "name": "getBindings",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "oriChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "oriToken",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "bound",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct TransferDataTypes.InToken",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getLatestPacket",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "srcChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "sequence",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "sender",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "receiver",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "amount",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "token",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "oriToken",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct TransferDataTypes.TransferPacketData",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "packetContract",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "clientManagerContract",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "accessManagerContract",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "latestPacket",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "srcChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "string",
+                "name": "sender",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "receiver",
+                "type": "string"
+            },
+            {
+                "internalType": "bytes",
+                "name": "amount",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "token",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "oriToken",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "limits",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "enable",
+                "type": "bool"
+            },
+            {
+                "internalType": "uint256",
+                "name": "timePeriod",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "timeBasedLimit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "previousTime",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "currentSupply",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "result",
+                "type": "bytes"
+            }
+        ],
+        "name": "onAcknowledgementPacket",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "name": "onRecvPacket",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "bytes",
+                        "name": "result",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "message",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Result",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "name": "outTokens",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "packet",
+        "outputs": [
+            {
+                "internalType": "contract IPacket",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "receiver",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct TransferDataTypes.TransferData",
+                "name": "transferData",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Fee",
+                "name": "fee",
+                "type": "tuple"
+            }
+        ],
+        "name": "sendTransfer",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_version",
+                "type": "uint256"
+            }
+        ],
+        "name": "setVersion",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "sender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "receiver",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct TransferDataTypes.TransferDataMulti",
+                "name": "transferData",
+                "type": "tuple"
+            }
+        ],
+        "name": "transfer",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "version",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

@@ -1,0 +1,134 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "sender",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint8[]",
+                        "name": "functions",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "bytes[]",
+                        "name": "data",
+                        "type": "bytes[]"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct MultiCallDataTypes.MultiCallData",
+                "name": "multiCallData",
+                "type": "tuple"
+            }
+        ],
+        "name": "SendPacket",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint8[]",
+                        "name": "functions",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "bytes[]",
+                        "name": "data",
+                        "type": "bytes[]"
+                    }
+                ],
+                "internalType": "struct MultiCallDataTypes.MultiCallData",
+                "name": "multiCallData",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Fee",
+                "name": "fee",
+                "type": "tuple"
+            }
+        ],
+        "name": "multiCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "packetContractAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "rccContractAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "transferContractAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

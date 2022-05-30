@@ -1,0 +1,21 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "port",
+                "type": "string"
+            }
+        ],
+        "name": "getModule",
+        "outputs": [
+            {
+                "internalType": "contract IModule",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

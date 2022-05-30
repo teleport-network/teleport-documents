@@ -1,0 +1,54 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "bytes[]",
+                "name": "data",
+                "type": "bytes[]"
+            }
+        ],
+        "name": "hashFromByteSlices",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "proofBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "specsBz",
+                "type": "bytes[]"
+            },
+            {
+                "internalType": "bytes",
+                "name": "rootBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "pathBz",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "value",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyMembership",
+        "outputs": [],
+        "stateMutability": "pure",
+        "type": "function"
+    }
+]

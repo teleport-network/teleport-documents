@@ -1,0 +1,222 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "header",
+                "type": "bytes"
+            }
+        ],
+        "name": "checkHeaderAndUpdateState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getClientType",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Type",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getLatestHeight",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "clientState",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "consensusState",
+                "type": "bytes"
+            }
+        ],
+        "name": "initializeState",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "status",
+        "outputs": [
+            {
+                "internalType": "enum IClient.Status",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "clientState",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "consensusState",
+                "type": "bytes"
+            }
+        ],
+        "name": "upgrade",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "proof",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "bytes",
+                "name": "acknowledgement",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyPacketAcknowledgement",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_number",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "revision_height",
+                        "type": "uint64"
+                    }
+                ],
+                "internalType": "struct Height.Data",
+                "name": "height",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "proof",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "sourceChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "bytes",
+                "name": "commitmentBytes",
+                "type": "bytes"
+            }
+        ],
+        "name": "verifyPacketCommitment",
+        "outputs": [],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

@@ -1,0 +1,392 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "dataHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes",
+                "name": "ack",
+                "type": "bytes"
+            }
+        ],
+        "name": "Ack",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "MULTISEND_ROLE",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "accessManager",
+        "outputs": [
+            {
+                "internalType": "contract IAccessManager",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "acks",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "clientManager",
+        "outputs": [
+            {
+                "internalType": "contract IClientManager",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getLatestPacket",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "srcChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "sequence",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "sender",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.RCCPacketData",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "packetContract",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "clientMgrContract",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "accessManagerContract",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "latestPacket",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "srcChain",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "destChain",
+                "type": "string"
+            },
+            {
+                "internalType": "uint64",
+                "name": "sequence",
+                "type": "uint64"
+            },
+            {
+                "internalType": "string",
+                "name": "sender",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "contractAddress",
+                "type": "string"
+            },
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes",
+                "name": "result",
+                "type": "bytes"
+            }
+        ],
+        "name": "onAcknowledgementPacket",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "name": "onRecvPacket",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "bytes",
+                        "name": "result",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "message",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Result",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "packet",
+        "outputs": [
+            {
+                "internalType": "contract IPacket",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "sender",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.RCCDataMulti",
+                "name": "rccData",
+                "type": "tuple"
+            }
+        ],
+        "name": "remoteContractCall",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "contractAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "data",
+                        "type": "bytes"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "destChain",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "relayChain",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct RCCDataTypes.RCCData",
+                "name": "rccData",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct PacketTypes.Fee",
+                "name": "fee",
+                "type": "tuple"
+            }
+        ],
+        "name": "sendRemoteContractCall",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

@@ -1,0 +1,106 @@
+[
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "bytes",
+                                "name": "addr",
+                                "type": "bytes"
+                            },
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "ed25519",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "secp256k1",
+                                        "type": "bytes"
+                                    }
+                                ],
+                                "internalType": "struct PublicKey.Data",
+                                "name": "pub_key",
+                                "type": "tuple"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "voting_power",
+                                "type": "int64"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "proposer_priority",
+                                "type": "int64"
+                            }
+                        ],
+                        "internalType": "struct Validator.Data[]",
+                        "name": "validators",
+                        "type": "tuple[]"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "bytes",
+                                "name": "addr",
+                                "type": "bytes"
+                            },
+                            {
+                                "components": [
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "ed25519",
+                                        "type": "bytes"
+                                    },
+                                    {
+                                        "internalType": "bytes",
+                                        "name": "secp256k1",
+                                        "type": "bytes"
+                                    }
+                                ],
+                                "internalType": "struct PublicKey.Data",
+                                "name": "pub_key",
+                                "type": "tuple"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "voting_power",
+                                "type": "int64"
+                            },
+                            {
+                                "internalType": "int64",
+                                "name": "proposer_priority",
+                                "type": "int64"
+                            }
+                        ],
+                        "internalType": "struct Validator.Data",
+                        "name": "proposer",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "int64",
+                        "name": "total_voting_power",
+                        "type": "int64"
+                    }
+                ],
+                "internalType": "struct ValidatorSet.Data",
+                "name": "vals",
+                "type": "tuple"
+            }
+        ],
+        "name": "genValidatorSetHash",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    }
+]
