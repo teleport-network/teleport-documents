@@ -35,17 +35,17 @@ We currently support the bridged token as a form of fee.
 
 ## 2-Hop Agent Mode
 
-In the agent mode, you need agent contract on teleport chain to pay fees for the second Hop (teleport -> destination chain).
+In the agent mode, you need the agent contract on Teleport chain to pay fees for the second Hop (Teleport -> destination chain).
 
-You can use you own way to achieve this based on your business logic.
+You can use your own method to achieve this outcome based on the logic of your program.
 
-We also provide the example of how to do it in our [official bridge implementation](../Code-Examples/4.2-HopAgent(Official-Bridge).md), check the link for details.
+However, we also provide an example of how to do this in our [official bridge implementation](../Code-Examples/4.2-HopAgent(Official-Bridge).md).
 
-In short is the following steps:
+In summary, the proccess is as follows: 
 
-1. Start a cross-chain transfer to the agent contract (teleport chain)
-   (This transfer amount should include the real transfer amount and the fees you want to give to the agent contract)
-2. add a fee amount parameter to indicate how much you want to give in remote agent contract call, recommend you do this in proxy contract.
+1. Start a cross-chain transfer to the agent contract (Teleport Chain)
+   (The transfer amount should include the real transfer amount as well as the fees you want to provide to the agent contract)
+2. Add the parameter "fee amount" to indicate how much you want to provide during the remote agent contract call; it is recommended that you do this in the form of a proxy contract.
 ```solidity
 Proxy.send()
 
@@ -57,7 +57,7 @@ function send(
         uint256 feeAmount ///fees you want to give to agent contract which come from the assets you transferred to agent contract
     )
 ```
-3. add an extra function in agent contract to calculate the agent contract fees/real transfer amount. You need to be careful of the precise of tokens on different chain.
+3. Add an extra function in the agent contract to calculate the agent contract fees/real transfer amount. You must be careful to consider the prices of tokens on different chains.
 ```solidity
     function checkPacketSyncAndGetAmountSrcChain(
         address tokenAddress,

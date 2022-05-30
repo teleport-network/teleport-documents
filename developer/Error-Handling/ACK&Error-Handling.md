@@ -2,9 +2,9 @@
 
 
 
-## What is ack
+## What is ACK?
 
-In teleport, with each Packet sent, relay will provide an option to realy an ACK message to inform the contract or the developer the excution results of this Packet.
+Within Teleport network, when each packet is sent the relay will provide an option to relay an ACK message to inform the contract or the developer of the excution results of this Packet.
 
 ```solidity
 struct Acknowledgement {
@@ -14,14 +14,14 @@ struct Acknowledgement {
 }
 ```
 
-Under most situations, the ack will actively return to the source chain by the relayer.
-But there are exceptions:
+Under most situations, the ACK will actively return to the source chain via the relayer.
+However, there are exceptions:
 
-For Ethereum (and other high gas cost chain), users need to manually pay fees to let relayer give the ack back if needed, and the transfer Packet will not relay acks due to cost controll.
+For Ethereum (and other chains with higher gas costs), users will need to manually pay fees to let the relayer return the ACK if needed, otherwise the transfer Packet will not relay ACK's due to cost control.
 
 ## Check ack status
 
-You can check your acks status in Packet.sol contract bycalling the getAckStatus method in Packet.sol 
+You can check the status of an ACK's in the Packet.sol contract by calling the getAckStatus method in Packet.sol 
 
 ```solidity
 
@@ -32,19 +32,19 @@ function getAckStatus(
     )
 ```
 
-It will check the ackStatus mapping and return the following:
+The method will check the ackStatus mapping and return the following:
 
 ```solidity
 
 mapping(bytes => uint8) public ackStatus; // 0 => not found , 1 => success , 2 => err
 
 ```
-If you don't know how to the parameters, check the [Track your Packet](../Cross-Chain-Tracking/1Track.md) section.
+If you don't understand the parameters, check the [Track your Packet](../Cross-Chain-Tracking/1Track.md) section.
 
 
-## How to get your acks
+## How to get your ACK's
 
-When the acks is realyed back to the soucechain, it will be stored in the source chain's RCC.sol contract.
+When the ACK is realyed back to the souce chain, it will be stored in the source chain's RCC.sol contract.
 
 ```solidity
 
@@ -52,7 +52,7 @@ mapping(bytes32 => bytes) public override acks;
 
 ```
 
-To get the acks, you need to [get your packet info](../Cross-Chain-Tracking/1Track.md) first. And construct the keys by encode your cross-chain data.
+To get the ACK's, you need to [get your packet info](../Cross-Chain-Tracking/1Track.md) first and construct the keys by encoding your cross-chain data.
 
 
 ![How to reslove ACK](./ACKProcess.png)
